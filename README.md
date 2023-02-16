@@ -38,7 +38,7 @@ where $I_\nu(\cdot)$ denotes the modified Bessel function of the first kind of o
 
 The transformation matrix $R$ is such that $[x \; y\; z] = [\gamma_1 \; \gamma_2 \; \gamma_3] R^\top$ with its transpose defined as follows:
 ```math
-\bR^T =
+\textif{R}^T =
   \begin{bmatrix}
     \gamma_1^T\\
     \gamma_2^T\\
