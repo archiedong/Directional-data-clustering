@@ -107,7 +107,7 @@ Taking partial derivatives of Equation with respect to $\pi_k$ and $\delta_k$ le
 The performance of the EM algorithm depends on a chosen initialization strategy. In this paper, vMFMM is initialized by the partition obtained by a directional $k$-means algorithm implemented in the R package skmeans. Unfortunately, the use of the clustering solution obtained by skmeans for initializing KMM as well as CKMM does not show satisfactory results. Therefore, to start KMM, we use the partition obtained from vMFMM, and to initialize CKMM, we employ the clustering found by KMM. Such a strategy produces the best results for the three considered mixture models.
 
 # Simulation
-<p float="left">
+<p float="center">
   <img src="https://user-images.githubusercontent.com/60518209/219496117-7e3d5f8e-f261-4f0a-9fcf-28d21c75c17e.png" width="230" />
   <img src="https://user-images.githubusercontent.com/60518209/219496149-c277c65c-4c70-447a-9028-ffd40d32a775.png" width="230" /> 
   <img src="https://user-images.githubusercontent.com/60518209/219496174-3f17c29b-3bfe-440c-9ec0-9ff2474307f7.png" width="230" />
