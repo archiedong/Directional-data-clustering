@@ -65,7 +65,7 @@ Then, the relationship between the angles $\theta$, $\varphi$, $\eta$ and vector
 Let $X_1, \ldots, X_n$ be a random sample consisting of $n$ observations lying on a sphere and following a mixture model with Kent-distributed components. Then, the corresponding pdf is given by
 ```math
 g(x; \Theta) = \sum_{k=1}^{K} \pi_k \mathcal{K}(x;\vartheta_k),
-```math
+```
 where $\mathcal{K}(x; \vartheta_k)$ is the $k^{th}$ Kent mixture component pdf with parameter vector $\vartheta_k$ as provided in Equation 2. It can be shown that the E-step of the EM algorithm requires updating posterior probabilities according to the following expression:
 ```math
 \ddot{\tau}_{ik}= \frac{\dot\pi_k \mathcal{K}(x_i; \dot\vartheta_k)}{ \sum_{r = 1}^{K} \dot\pi_r \mathcal{K}(x_i; \dot\vartheta_r)}
