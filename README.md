@@ -108,10 +108,10 @@ The performance of the EM algorithm depends on a chosen initialization strategy.
 
 # Simulation
 <p float="left">
-  <img src="https://user-images.githubusercontent.com/60518209/219496117-7e3d5f8e-f261-4f0a-9fcf-28d21c75c17e.png" width="100" />
-  <img src="https://user-images.githubusercontent.com/60518209/219496149-c277c65c-4c70-447a-9028-ffd40d32a775.png" width="100" /> 
-  <img src="https://user-images.githubusercontent.com/60518209/219496174-3f17c29b-3bfe-440c-9ec0-9ff2474307f7.png" width="100" />
-  <img src="https://user-images.githubusercontent.com/60518209/219496235-f256e937-3045-4d15-9f14-daadab94779a.png" width="100" />
+  <img src="https://user-images.githubusercontent.com/60518209/219496117-7e3d5f8e-f261-4f0a-9fcf-28d21c75c17e.png" width="250" />
+  <img src="https://user-images.githubusercontent.com/60518209/219496149-c277c65c-4c70-447a-9028-ffd40d32a775.png" width="250" /> 
+  <img src="https://user-images.githubusercontent.com/60518209/219496174-3f17c29b-3bfe-440c-9ec0-9ff2474307f7.png" width="250" />
+  <img src="https://user-images.githubusercontent.com/60518209/219496235-f256e937-3045-4d15-9f14-daadab94779a.png" width="250" />
 </p>
 
 In this section, we assess the proposed methodology by comparing the performance of vMFMM, KMM, and CKMM in three different settings. In the first setting, we simulate data from vMFMM. In the second one, data are generated from KMM. Finally, in the last case data sets are obtained based on CKMM. In each setting, there are 200 data sets of size 2500 generated from mixtures with parameters provided in Table~\ref{table.exp}. All mixtures are assumed to have five components. For each simulated data set, we apply vMFMM, KMM, and CKMM. To assess the adequacy of model fitting, we use BIC. As the true number of clusters is assumed to be unknown, the best model is identified by examining BIC values for $K = 1, \ldots, 20$. In order to evaluate model-based clustering performance, we compare the original simulated and estimated partitions based on the adjusted Rand index (ARI) using function RandIndex from the R package MixSim. The upper bound of ARI is equal to 1.0 and is achievable only in the case of the perfect match between the compared partitions. The obtained results are summarized in Table1 and illustrated in Figure2.
