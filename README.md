@@ -105,8 +105,5 @@ Taking partial derivatives of Equation~\ref{eq.Q} with respect to $\pi_k$ and $\
 ```math
 \ddot{\pi}_{k} = \frac{\sum_{i = 1}^{n} \ddot{\tau}_{ik}}{n}, \quad \quad \ddot{\delta}_{k} = \frac{\sum_{i = 1} ^ {n} \ddot{\tau}_{ik} \ddot{\nu}_{i|k}}{\sum_{i = 1}^{n} \ddot{\tau}_{ik}}.
 ```
-Same to KMM, the $\ddot{\pi}_{k}$ and $\ddot{\delta}_{k}$ can be obtained from the MLE of posterior probabilities $\ddot{\pi}_{k} \equiv \pi_{ik}(\dot{\bPsi})$ according to the Bayes decision rule: $\ddot{Z}_i$  =  argmax$_k$ $\dot{\pi}_{k}$.
-The other parameters can be obtained numerically by a variety of optimization procedures, $e.g.$ a limited-memory modification of BFGS quasi-Newton method.
-
 The performance of the EM algorithm depends on a chosen initialization strategy. In this paper, vMFMM is initialized by the partition obtained by a directional $k$-means algorithm \citep{maitraandramler10} implemented in the R package skmeans. Unfortunately, the use of the clustering solution obtained by skmeans for initializing KMM as well as CKMM does not show satisfactory results. Therefore, to start KMM, we use the partition obtained from vMFMM, and to initialize CKMM, we employ the clustering found by KMM. Such a strategy produces the best results for the three considered mixture models.
 
