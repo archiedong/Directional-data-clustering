@@ -78,3 +78,10 @@ where one dot and two dots on the top of parameters stand for estimates at the p
     \end{split}
 ```
 The maximization of this $Q$ function requires numerical optimization over all model parameters except for the mixing proportions that can be estimated analytically by $$\ddot\pi_k = n^{-1} \sum_{i = 1}^n \ddot\tau_{ik}.$$.
+
+## Contaminated Kent mixture model
+Despite its attractive capability of modeling ellipticity on a sphere, the performance of KMM can be severely affected by the presence of noise or outliers. In this section, we propose a novel distribution named a contaminated Kent mixture model that can relax these limitations effectively. Similarly to the mixture with contaminated Gaussian components \citep{punzoandmcnicholas16}, the underlying assumption is that the excessive variability in each data group can be modeled by a submixture of two components sharing the majority of their parameters but having different dispersions. In a Kent distribution, the concentration parameter $\kappa$ reflects the variability in data. Hence, the pdf of CKMM is given by
+```math
+g(x;\Theta) = \sum_{k=1}^{K} \pi_k \big[\delta_k \mathcal{K}(x; \vartheta_k) + (1 - \delta_{k})\mathcal{K}(\bx; \tilde\vartheta_k)\big],
+```
+where $\vartheta_k = (\kappa_k, \beta_k, \theta_k, \varphi_k, \eta_k)^\top$, $\tilde\vartheta_k = (\alpha_k \kappa_k, \beta_k, \theta_k, \varphi_k, \eta_k)^\top$, and $\delta_k$ is a submixture weight parameter. Here, the only difference between $\vartheta_k$ and $\tilde\vartheta_k$ vectors is due to the multiplier $\alpha_k \in (0, 1)$ responsible for the dispersion inflation in the second subcomponent. The purpose of introducing the inflated subcomponent is to better model heavy tails. From now on, we refer to the uninflated and inflated subcomponents as primary and secondary, respectively.
