@@ -135,3 +135,5 @@ To conclude, the clustering performance of CKMM is substantially better than tha
 
 <img width="8500" align = "center" alt="Screenshot 2023-02-16 at 4 18 23 PM" src="https://user-images.githubusercontent.com/60518209/219500073-9948add7-479e-431a-bb81-d6186b727687.png">
 
+<img width="8500" align = "center" alt= "Screenshot 2023-02-16 at 4 18 47 PM" src="https://user-images.githubusercontent.com/60518209/219500421-d247a100-9e57-4636-97ba-fab3fff15d0c.png">
+
