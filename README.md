@@ -29,4 +29,4 @@ more  exible than a von Mises-Fisher distribution that is
 similar to a normal distribution with a spherical covariance matrix.
 The probability density function (pdf) of the Kent distribution is
 given by 
-![img][2724x1365, 50%](https://user-images.githubusercontent.com/60518209/219405639-6b425462-90af-41fd-9606-663ab99ac721.png)
+![img|2724x1365, 50%](https://user-images.githubusercontent.com/60518209/219405639-6b425462-90af-41fd-9606-663ab99ac721.png)
