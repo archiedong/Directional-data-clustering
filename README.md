@@ -133,7 +133,7 @@ In Table1, one can observe the distribution of the estimated mixture order $\hat
 
 To conclude, the clustering performance of CKMM is substantially better than that of competitiors as can be seen from much higher average ARI. Based on the conducted set of experiments, we can conclude that while the correct mixture model is always prefered by BIC, the model-based clustering performance of CKMM is superior over its competitors as demonstrated by the best results obtained in all considered settings.
 
-
+```math
 \begin{table}
   	\caption{Parameters of models from the simulation studies conducted in Section~\ref{sect.exp}.}
 	\centering
@@ -151,3 +151,4 @@ To conclude, the clustering performance of CKMM is substantially better than tha
 	\end{tabular}}}
 	\label{table.exp}
 \end{table}
+```
