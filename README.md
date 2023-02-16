@@ -68,7 +68,7 @@ g(x; \Theta) = \sum_{k=1}^{K} \pi_k \mathcal{K}(x;\vartheta_k),
 ```
 where $\mathcal{K}(x; \vartheta_k)$ is the $k^{th}$ Kent mixture component pdf with parameter vector $\vartheta_k$ as provided in Equation 2. It can be shown that the E-step of the EM algorithm requires updating posterior probabilities according to the following expression:
 ```math
-\ddot{\tau}_{ik}= \frac{\dot\pi_k \mathcal{K}(x_i; \dot\vartheta_k)} {\sum_{r = 1}^{K} \dot\pi_r \mathcal{K}(x_i; \dot\vartheta_r)}
+\ddot{\tau}_{ik}= \frac{\dot\pi_k \mathcal{K}(x_i; \dot\vartheta_k)} {\dot\pi_r \mathcal{K}(x_i; \dot\vartheta_r)}
 ```
 where one dot and two dots on the top of parameters stand for estimates at the previous and current iterations, respectively. Here, $\tau_{ik}$ denotes the probability that $x_i$ originates from the $k^{th}$ mixture component. The conditional expectation of the complete-data log-likelihood commonly referred to as the $Q$ function, takes the following form:
 ```math
