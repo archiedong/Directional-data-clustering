@@ -101,9 +101,9 @@ Q(\Theta; \dot{\Theta}, \{x_i\}_{i=1}^n) =& \sum_{i=1}^{n} \sum_{k=1}^{K} \ddot{
 & + \ddot{\nu}_{i|k} \log{\mathcal{K} (x_i; \vartheta_k)} + (1 - \ddot{\nu}_{i|k})\log{\mathcal{K}(x_i; \tilde\vartheta_k)}\Big].
   \end{split}
 ```
-Taking partial derivatives of Equation~\ref{eq.Q} with respect to $\pi_k$ and $\delta_k$ leads to the following expressions:
+Taking partial derivatives of Equation with respect to $\pi_k$ and $\delta_k$ leads to the following expressions:
 ```math
-\ddot{\pi}_{k} = \frac{\sum_{i = 1}^{n} \ddot{\tau}_{ik}}{n}, \quad \quad \ddot{\delta}_{k} = \frac{\sum_{i = 1} ^ {n} \ddot{\tau}_{ik} \ddot{\nu}_{i|k}}{\sum_{i = 1}^{n} \ddot{\tau}_{ik}}.
+\ddot{\pi}_{k} = \frac{\sum \ddot{\tau}_{ik}}{n}, \quad \quad \ddot{\delta}_{k} = \frac{\sum \ddot{\tau}_{ik} \ddot{\nu}_{i|k}}{\sum \ddot{\tau}_{ik}}.
 ```
 The performance of the EM algorithm depends on a chosen initialization strategy. In this paper, vMFMM is initialized by the partition obtained by a directional $k$-means algorithm \citep{maitraandramler10} implemented in the R package skmeans. Unfortunately, the use of the clustering solution obtained by skmeans for initializing KMM as well as CKMM does not show satisfactory results. Therefore, to start KMM, we use the partition obtained from vMFMM, and to initialize CKMM, we employ the clustering found by KMM. Such a strategy produces the best results for the three considered mixture models.
 
