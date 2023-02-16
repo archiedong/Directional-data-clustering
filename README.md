@@ -74,7 +74,7 @@ where one dot and two dots on the top of parameters stand for estimates at the p
 ```math
   \begin{split}
     Q(\Theta; \dot\Theta, \{x_i\}_{i=1}^n) =  \sum_{i=1}^{n} \sum_{k=1}^{K} \ddot\tau_{ik}\bigg(&\log \pi_k - \log\bigg\{2\pi \sum_{j=0}^\infty \frac{\Gamma(j+\frac{1}{2})}{\Gamma(j+1)}\beta_k^{2j} \left(\frac{2}{\kappa_k}\right)^{2j+\frac{1}{2}} I_{2j+\frac{1}{2}}(\kappa_k)\bigg\}\\
- & + \kappa_k \gamma_{1k}^\top x_i + \beta_k \gamma_{2k}^\top \bx_i \bx_i^\top \gamma_{2k} - \beta_k \gamma_{3k}^\top x_i x_i^\top \gamma_{3k}\bigg).
+ & + \kappa_k \gamma_{1k}^\top x_i + \beta_k \gamma_{2k}^\top x_i x_i^\top \gamma_{2k} - \beta_k \gamma_{3k}^\top x_i x_i^\top \gamma_{3k}\bigg).
     \end{split}
 ```
-The maximization of this $Q$ function requires numerical optimization over all model parameters except for the mixing proportions that can be estimated analytically by $\ddot\pi_k = n^{-1}\sum_{i = 1}^n \ddot\tau_{ik}$.
+The maximization of this $Q$ function requires numerical optimization over all model parameters except for the mixing proportions that can be estimated analytically by $$\ddot\pi_k = n^{-1} \sum_{i = 1}^n \ddot\tau_{ik}$$.
