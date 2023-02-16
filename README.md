@@ -139,8 +139,8 @@ To conclude, the clustering performance of CKMM is substantially better than tha
 
 
 # Applications
-<img width="8500" align = "center" src= "https://user-images.githubusercontent.com/60518209/219501607-b29c2b2e-f258-49ef-b583-2a4177323f7f.png">
-<img width="8500" align = "center" src= "https://user-images.githubusercontent.com/60518209/219501782-aa597309-fd73-429b-b48e-63f045cd7b43.png">
+<img width="4500" align = "center" src= "https://user-images.githubusercontent.com/60518209/219501607-b29c2b2e-f258-49ef-b583-2a4177323f7f.png">
+<img width="4500" align = "center" src= "https://user-images.githubusercontent.com/60518209/219501782-aa597309-fd73-429b-b48e-63f045cd7b43.png">
 
 To demonstrate the importance of the methodology outlined in this paper, we consider a data set referred to as {\it Rock Site} data (generously provided by the Julius Kruttschnitt Mineral Reseach Centre (JKMRC) at the University of Queensland). In nature, a rock usually contains multiple fractures or discontinuity planes that are generally formed in a parallel fashion. Such parallel fracture planes are commonly called joint sets. Due to the fact that forces from more than one direction often act on a rock mass, a number of joint sets may be observed. In order to record the orientation of the joint sets in space, the dip direction and dip angle are measured. As shown in Figure4, the dip direction is the direction toward which the plane is inclined and the dip angle is the angle of  the plane inclination. The {\it Rock Site} data set consists of 860 measurements of dip angle and direction.  %In this application, the data are axial (antipodally symmetric) and the vMFMM, KMM, and CKMM were fitted to the data. %One advantage of above three methods is that their use is not restricted to antipodally symmetric data.
 
