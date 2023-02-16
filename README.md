@@ -37,7 +37,7 @@ given by
 where $I_\nu(\cdot)$ denotes the modified Bessel function of the first kind of order $\nu$ and $\vartheta = (\kappa, \beta, \theta, \varphi, \eta)$ is the parameter vector. Here, $\kappa$ stands for a concentration parameter and $\beta$ is responsible for modeling the ellipticity of distribution contours, subject to the inequality $0 < \beta /\kappa < 0.5$. $\gamma_1$, $\gamma_2$, $\gamma_3$ are orthogonal unit vectors representing mean, major, and minor directions, respectively, as shown in above Kent Figure. Finally, $\theta$, $\varphi$, and $\eta$ are the angles responsible for transforming $\gamma_1 = (\gamma_{11}, \gamma_{12}, \gamma_{13})^\top$, $\gamma_2= (\gamma_{21}, \gamma_{22}, \gamma_{23})^\top$, and $\gamma_3= (\gamma_{31}, \gamma_{32}, \gamma_{33})^\top$ into $x = (1, 0, 0)^\top$, $y = (0, 1, 0)^\top$, and $z = (0, 0, 1)^\top$ in Cartesian coordinates. 
 
 The transformation matrix $R$ is such that $[x \; y\; z] = [\gamma_1 \; \gamma_2 \; \gamma_3] R^\top$ with its transpose defined as follows:
-\begin{equation*}
+```math
 \bR^T =
   \begin{bmatrix}
     \gamma_1^T\\
@@ -50,12 +50,12 @@ The transformation matrix $R$ is such that $[x \; y\; z] = [\gamma_1 \; \gamma_2
     -\cos\theta \sin\varphi & \cos\theta \cos\varphi \cos\eta - \sin\theta \sin\eta & \cos\theta \cos\varphi \sin\eta + \sin\theta \cos\eta\\
     \sin\theta \sin\varphi & -\sin\theta \cos\varphi \cos\eta - \cos\theta \sin\eta & -\sin\theta \cos\varphi \sin\eta + \cos\theta \cos\eta
   \end{bmatrix}.
-\end{equation*}
+```
 Then, the relationship between the angles $\theta$, $\varphi$, $\eta$ and vectors $\gamma_1$, $\gamma_2$, $\gamma_3$ can be found as
-\begin{equation*}
-  \begin{split}
+```math
+\begin{split}
 \varphi = \arccos(\gamma_{11}),& \; \varphi \in{(0, \pi)},\quad\quad\quad\quad
 \theta = \arccos\bigg(-\frac{\gamma_{21}}{\sqrt{1-\gamma_{11}}}\bigg), \; \theta \in{(0, \pi)},\\
 &\eta = \arccos\bigg(\frac{\gamma_{12}}{\sqrt{1-\gamma_{11}}}\bigg), \; \eta \in{(0, 2\pi)}.
 \end{split}
-\end{equation*}
+```
