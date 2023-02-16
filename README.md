@@ -87,13 +87,13 @@ g(x;\Theta) = \sum_{k=1}^{K} \pi_k \big[\delta_k \mathcal{K}(x; \vartheta_k) + (
 where $\vartheta_k = (\kappa_k, \beta_k, \theta_k, \varphi_k, \eta_k)^\top$, $\tilde\vartheta_k = (\alpha_k \kappa_k, \beta_k, \theta_k, \varphi_k, \eta_k)^\top$, and $\delta_k$ is a submixture weight parameter. Here, the only difference between $\vartheta_k$ and $\tilde\vartheta_k$ vectors is due to the multiplier $\alpha_k \in (0, 1)$ responsible for the dispersion inflation in the second subcomponent. The purpose of introducing the inflated subcomponent is to better model heavy tails. From now on, we refer to the uninflated and inflated subcomponents as primary and secondary, respectively.
 The corresponding complete-data likelihood function can be written as
 ```math
- L_c(\Theta; \{x_i\}_{i=1}^n) = \prod_{i=1}^n \prod_{k=1}^K \bigg[\pi_k \Big[\delta_{kj} \mathcal{K}(\bx_i; \bvartheta_k)\Big]^{I(W_i = 1|Z_i = k)}\Big[(1 - \delta_{k})\mathcal{K}(x_i; \tilde\vartheta_k)\Big]^{I(W_i = 2|Z_i = k)}\bigg]^{I(Z_i = k)},
+ L_c(\Theta; \{x_i\}_{i=1}^n) = \prod_{i=1}^n \prod_{k=1}^K \bigg[\pi_k \Big[\delta_{kj} \mathcal{K}(x_i; \vartheta_k)\Big]^{I(W_i = 1|Z_i = k)}\Big[(1 - \delta_{k})\mathcal{K}(x_i; \tilde\vartheta_k)\Big]^{I(W_i = 2|Z_i = k)}\bigg]^{I(Z_i = k)},
 ```
 where $W_i$ represents the subcomponent label, with $W_i = 1$ and $W_i = 2$ implying that the observation $x_i$ originated from the primary and secondary subcomponents, respectively. Then, it follows that the E-step of the EM algorithm requires updating posterior probabilities according to the following expressions:
 ```math
   \ddot{\tau}_{ik} = \frac{\dot{\pi_k} \big[\dot{\delta}_k \mathcal{K}(x_i; \dot\vartheta_k) + (1 - \dot{\delta}_{k})\mathcal{K}(x_i; \dot{\tilde\vartheta}_k)\big]}{\sum_{r = 1} ^{K}\dot{\pi_r} \big[\dot{\delta}_r \mathcal{K}(x_i; \dot\vartheta_r) + (1 - \dot{\delta}_{r})\mathcal{K}(x_i; \dot{\tilde\vartheta}_r)\big]}, \quad \ddot{\nu}_{i|k} = \frac{\dot{\delta}_k \mathcal{K}(x_i; \dot\vartheta_k) }{\dot{\delta}_k \mathcal{K}(x_i; \dot\vartheta_k) + (1 - \dot{\delta}_{k})\mathcal{K}(x_i; \dot{\tilde\vartheta}_k)}.
 ```
-Here, $\tau_{ik}$ is the probability that $\bx_i$ originates from the $k^{th}$ mixture component and $\nu_{i|k}$ is the probability that $x_i$ belongs to the primary distribution within the $k^{th}$ component. In other words, $\nu_{i|k}$ can be seen as the probability that $x_i$ is not an outlying observation in the $k^{th}$ component.
+Here, $\tau_{ik}$ is the probability that $x_i$ originates from the $k^{th}$ mixture component and $\nu_{i|k}$ is the probability that $x_i$ belongs to the primary distribution within the $k^{th}$ component. In other words, $\nu_{i|k}$ can be seen as the probability that $x_i$ is not an outlying observation in the $k^{th}$ component.
 The $Q$ function that needs to be optimized at the M step takes the following form:
 ```math
   \begin{split}
