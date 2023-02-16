@@ -2,6 +2,7 @@
 To cluster asymmetrically distributed data on a sphere, Kent mixture model is commonly used. However, the performanc of such a model can be severely affected by the presence of noise or outliers. A novel contaminated Kent mixture model is proposed to alleviate this issue effectively.
 
 # Introduction
+![img|2724x1365, 50%](https://user-images.githubusercontent.com/60518209/219405639-6b425462-90af-41fd-9606-663ab99ac721.png)
 Directional statistics is a popular area with an abundance of applications in earth science, meteorology, biology, and other disciplines
 studying data with periodic characteristics. Directional data represent a collection of unit vectors with information contained in the
 form of vector orientation. Since there is no natural zero direction, the analysis of directional data doesn’t fall in the framework of
@@ -32,8 +33,6 @@ given by
 ```math
 \mathcal{K}(\textbf{x}; \vartheta)= \frac{ \exp{(\kappa \gamma_1 ^\top x + \beta[(\gamma_2^\top x)^2 - (\gamma_3^\top x)^2])}}{2\pi \sum_{j=0}^\infty \frac{\Gamma(j+\frac{1}{2})}{\Gamma(j+1)}\beta^{2j} \left(\frac{2}{\kappa}\right)^{2j+\frac{1}{2}} I_{2j+\frac{1}{2}}(\kappa)}
 ```
-![img|2724x1365, 50%](https://user-images.githubusercontent.com/60518209/219405639-6b425462-90af-41fd-9606-663ab99ac721.png)
-
 where $I_\nu(\cdot)$ denotes the modified Bessel function of the first kind of order $\nu$ and $\vartheta = (\kappa, \beta, \theta, \varphi, \eta)$ is the parameter vector. Here, $\kappa$ stands for a concentration parameter and $\beta$ is responsible for modeling the ellipticity of distribution contours, subject to the inequality $0 < \beta /\kappa < 0.5$. $\gamma_1$, $\gamma_2$, $\gamma_3$ are orthogonal unit vectors representing mean, major, and minor directions, respectively, as shown in above Kent Figure. Finally, $\theta$, $\varphi$, and $\eta$ are the angles responsible for transforming $\gamma_1 = (\gamma_{11}, \gamma_{12}, \gamma_{13})^\top$, $\gamma_2= (\gamma_{21}, \gamma_{22}, \gamma_{23})^\top$, and $\gamma_3= (\gamma_{31}, \gamma_{32}, \gamma_{33})^\top$ into $x = (1, 0, 0)^\top$, $y = (0, 1, 0)^\top$, and $z = (0, 0, 1)^\top$ in Cartesian coordinates. 
 
 The transformation matrix $R$ is such that $[x \; y\; z] = [\gamma_1 \; \gamma_2 \; \gamma_3] R^\top$ with its transpose defined as follows:
