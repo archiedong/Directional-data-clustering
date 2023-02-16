@@ -133,16 +133,5 @@ In Table1, one can observe the distribution of the estimated mixture order $\hat
 
 To conclude, the clustering performance of CKMM is substantially better than that of competitiors as can be seen from much higher average ARI. Based on the conducted set of experiments, we can conclude that while the correct mixture model is always prefered by BIC, the model-based clustering performance of CKMM is superior over its competitors as demonstrated by the best results obtained in all considered settings.
 
-\[
-	{\begin{array}{l|cccccccccc} 
-			\hline
-			Setting &	$\pi_k$ & $\begin{bsmallmatrix}\theta_1 \\ \phi_1 \\ \eta_1 \end{bsmallmatrix}$ & $\begin{bsmallmatrix}\theta_2 \\ \phi_2 \\ \eta_2 \end{bsmallmatrix}$ & $\begin{bsmallmatrix}\theta_3 \\ \phi_3 \\ \eta_3 \end{bsmallmatrix}$ & $\begin{bsmallmatrix}\theta_4 \\ \phi_4 \\ \eta_4 \end{bsmallmatrix}$ & $\begin{bsmallmatrix}\theta_5 \\ \phi_5 \\ \eta_5 \end{bsmallmatrix}$ & $\kappa_k$ &	$\beta_k$ & $\alpha_k$ & $\delta_k$ \\
-		\hline
-		vMFMM &	0.20 & $\begin{bsmallmatrix}\pi / 6\\ \pi / 2\\ -\end{bsmallmatrix}$ & $\begin{bsmallmatrix} \pi / 4 \\ \pi / 2 \\ -\end{bsmallmatrix}$ & $\begin{bsmallmatrix} 31 \pi / 100 \\ 4 \pi / 5 \\ - \end{bsmallmatrix}$  & $\begin{bsmallmatrix} 9 \pi / 25 \\ 2 \pi / 5 \\ - \end{bsmallmatrix}$ & $\begin{bsmallmatrix} 3 \pi / 10 \\ \pi / 4 \\ - \end{bsmallmatrix}$ & 100 & -- & -- & --\\
-		KMM & 0.20 & $\begin{bsmallmatrix}\pi / 6\\ \pi / 2\\ \pi / 2 \end{bsmallmatrix}$ & $\begin{bsmallmatrix} \pi / 4 \\ \pi / 2 \\ 0 \end{bsmallmatrix}$ & $\begin{bsmallmatrix} 31 \pi / 100 \\ 4 \pi / 5 \\ \pi \end{bsmallmatrix}$  & $\begin{bsmallmatrix} 9 \pi / 25 \\ 2 \pi / 5 \\ \pi / 2 \end{bsmallmatrix}$ & $\begin{bsmallmatrix} 3 \pi / 10 \\ \pi / 4 \\ \pi / 2 \end{bsmallmatrix}$ & 100 & 30 & -- & --\\
-		CKMM & 0.20 & $\begin{bsmallmatrix}\pi / 6\\ \pi / 2\\ \pi / 2 \end{bsmallmatrix}$ & $\begin{bsmallmatrix} \pi / 4 \\ \pi / 2 \\ 0 \end{bsmallmatrix}$ & $\begin{bsmallmatrix} 31 \pi / 100 \\ 4 \pi / 5 \\ \pi \end{bsmallmatrix}$  & $\begin{bsmallmatrix} 9 \pi / 25 \\ 2 \pi / 5 \\ \pi / 2 \end{bsmallmatrix}$ & $\begin{bsmallmatrix} 3 \pi / 10 \\ \pi / 4 \\ \pi / 2 \end{bsmallmatrix}$ & 100 & 30 & 0.61 & 0.90\\
-			\hline
-			
-\end{array}
-\]
+<img width="200" alt="Screenshot 2023-02-16 at 4 18 23 PM" src="https://user-images.githubusercontent.com/60518209/219500073-9948add7-479e-431a-bb81-d6186b727687.png">
 
