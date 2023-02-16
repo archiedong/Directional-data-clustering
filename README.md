@@ -28,5 +28,5 @@ is capable of modeling elliptical data, although on a sphere. It is considerably
 more  exible than a von Mises-Fisher distribution that is
 similar to a normal distribution with a spherical covariance matrix.
 The probability density function (pdf) of the Kent distribution is
-given by <img src="https://user-images.githubusercontent.com/60518209/219405639-6b425462-90af-41fd-9606-663ab99ac721.png" width = "300" height = "300">
+given by <img src="https://user-images.githubusercontent.com/60518209/219405639-6b425462-90af-41fd-9606-663ab99ac721.png" width = "2427" height = "1365">
 
