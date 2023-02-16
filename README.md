@@ -119,6 +119,12 @@ The performance of the EM algorithm depends on a chosen initialization strategy.
   <img src="https://user-images.githubusercontent.com/60518209/219497490-5b98389e-f2af-4e33-85a6-ec9f41e92a10.png" width="230" />
   <img src="https://user-images.githubusercontent.com/60518209/219497493-78ad31b4-d8fa-462f-9707-b01a13112c64.png" width="230" />
 </p>
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/60518209/219498070-d3724dd3-9eb3-46aa-9717-092b9c62ffee.png" width="230" />
+  <img src="https://user-images.githubusercontent.com/60518209/219498081-a2c7c76d-6cac-4aad-9570-10206d34ca31.png" width="230" /> 
+  <img src="https://user-images.githubusercontent.com/60518209/219498085-4a446b9e-e30e-4679-884e-444db155af49.png" width="230" />
+  <img src="https://user-images.githubusercontent.com/60518209/219498091-e76bd02d-59b1-48ae-a075-9785fc060963.png" width="230" />
+</p>
 
 
 In this section, we assess the proposed methodology by comparing the performance of vMFMM, KMM, and CKMM in three different settings. In the first setting, we simulate data from vMFMM. In the second one, data are generated from KMM. Finally, in the last case data sets are obtained based on CKMM. In each setting, there are 200 data sets of size 2500 generated from mixtures with parameters provided in Table~\ref{table.exp}. All mixtures are assumed to have five components. For each simulated data set, we apply vMFMM, KMM, and CKMM. To assess the adequacy of model fitting, we use BIC. As the true number of clusters is assumed to be unknown, the best model is identified by examining BIC values for $K = 1, \ldots, 20$. In order to evaluate model-based clustering performance, we compare the original simulated and estimated partitions based on the adjusted Rand index (ARI) using function RandIndex from the R package MixSim. The upper bound of ARI is equal to 1.0 and is achievable only in the case of the perfect match between the compared partitions. The obtained results are summarized in Table1 and illustrated in Figure2.
