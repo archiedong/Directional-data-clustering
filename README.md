@@ -85,3 +85,28 @@ Despite its attractive capability of modeling ellipticity on a sphere, the perfo
 g(x;\Theta) = \sum_{k=1}^{K} \pi_k \big[\delta_k \mathcal{K}(x; \vartheta_k) + (1 - \delta_{k})\mathcal{K}(x; \tilde\vartheta_k)\big],
 ```
 where $\vartheta_k = (\kappa_k, \beta_k, \theta_k, \varphi_k, \eta_k)^\top$, $\tilde\vartheta_k = (\alpha_k \kappa_k, \beta_k, \theta_k, \varphi_k, \eta_k)^\top$, and $\delta_k$ is a submixture weight parameter. Here, the only difference between $\vartheta_k$ and $\tilde\vartheta_k$ vectors is due to the multiplier $\alpha_k \in (0, 1)$ responsible for the dispersion inflation in the second subcomponent. The purpose of introducing the inflated subcomponent is to better model heavy tails. From now on, we refer to the uninflated and inflated subcomponents as primary and secondary, respectively.
+The corresponding complete-data likelihood function can be written as
+```math
+ L_c(\Theta; \{x_i\}_{i=1}^n) = \prod_{i=1}^n \prod_{k=1}^K \bigg[\pi_k \Big[\delta_{kj} \mathcal{K}(\bx_i; \bvartheta_k)\Big]^{I(W_i = 1|Z_i = k)}\Big[(1 - \delta_{k})\mathcal{K}(x_i; \tilde\vartheta_k)\Big]^{I(W_i = 2|Z_i = k)}\bigg]^{I(Z_i = k)},
+```
+where $W_i$ represents the subcomponent label, with $W_i = 1$ and $W_i = 2$ implying that the observation $x_i$ originated from the primary and secondary subcomponents, respectively. Then, it follows that the E-step of the EM algorithm requires updating posterior probabilities according to the following expressions:
+```math
+  \ddot{\tau}_{ik} = \frac{\dot{\pi_k} \big[\dot{\delta}_k \mathcal{K}(x_i; \dot\vartheta_k) + (1 - \dot{\delta}_{k})\mathcal{K}(x_i; \dot{\tilde\vartheta}_k)\big]}{\sum_{r = 1} ^{K}\dot{\pi_r} \big[\dot{\delta}_r \mathcal{K}(x_i; \dot\vartheta_r) + (1 - \dot{\delta}_{r})\mathcal{K}(x_i; \dot{\tilde\vartheta}_r)\big]}, \quad \ddot{\nu}_{i|k} = \frac{\dot{\delta}_k \mathcal{K}(x_i; \dot\vartheta_k) }{\dot{\delta}_k \mathcal{K}(x_i; \dot\vartheta_k) + (1 - \dot{\delta}_{k})\mathcal{K}(x_i; \dot{\tilde\vartheta}_k)}.
+```
+Here, $\tau_{ik}$ is the probability that $\bx_i$ originates from the $k^{th}$ mixture component and $\nu_{i|k}$ is the probability that $x_i$ belongs to the primary distribution within the $k^{th}$ component. In other words, $\nu_{i|k}$ can be seen as the probability that $x_i$ is not an outlying observation in the $k^{th}$ component.
+The $Q$ function that needs to be optimized at the M step takes the following form:
+```math
+  \begin{split}
+Q(\Theta; \dot{\Theta}, \{x_i\}_{i=1}^n) =& \sum_{i=1}^{n} \sum_{k=1}^{K} \ddot{{\tau}}_{ik}\Big[\log{\pi_k} + \ddot{{\nu}}_{i|k} \log{\delta_k} + (1 - \ddot{\nu}_{i|k}) \log{(1 -\delta_k)} \\
+& + \ddot{\nu}_{i|k} \log{\mathcal{K} (x_i; \vartheta_k)} + (1 - \ddot{\nu}_{i|k})\log{\mathcal{K}(x_i; \tilde\vartheta_k)}\Big].
+  \end{split}
+```
+Taking partial derivatives of Equation~\ref{eq.Q} with respect to $\pi_k$ and $\delta_k$ leads to the following expressions:
+```math
+\ddot{\pi}_{k} = \frac{\sum_{i = 1}^{n} \ddot{\tau}_{ik}}{n}, \quad \quad \ddot{\delta}_{k} = \frac{\sum_{i = 1} ^ {n} \ddot{\tau}_{ik} \ddot{\nu}_{i|k}}{\sum_{i = 1}^{n} \ddot{\tau}_{ik}}.
+```
+Same to KMM, the $\ddot{\pi}_{k}$ and $\ddot{\delta}_{k}$ can be obtained from the MLE of posterior probabilities $\ddot{\pi}_{k} \equiv \pi_{ik}(\dot{\bPsi})$ according to the Bayes decision rule: $\ddot{Z}_i$  =  argmax$_k$ $\dot{\pi}_{k}$.
+The other parameters can be obtained numerically by a variety of optimization procedures, $e.g.$ a limited-memory modification of BFGS quasi-Newton method.
+
+The performance of the EM algorithm depends on a chosen initialization strategy. In this paper, vMFMM is initialized by the partition obtained by a directional $k$-means algorithm \citep{maitraandramler10} implemented in the R package skmeans. Unfortunately, the use of the clustering solution obtained by skmeans for initializing KMM as well as CKMM does not show satisfactory results. Therefore, to start KMM, we use the partition obtained from vMFMM, and to initialize CKMM, we employ the clustering found by KMM. Such a strategy produces the best results for the three considered mixture models.
+
